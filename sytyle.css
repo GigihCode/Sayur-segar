@@ -1,0 +1,163 @@
+/* Mengatur font dan reset margin/padding */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Efek parallax untuk hero section */
+.hero-section {
+    height: 100vh; /* Mengisi seluruh tinggi layar */
+    background-image: url('gambar selada.png'); /* Ganti URL dengan gambar Anda */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap agar teks lebih jelas */
+}
+
+/* Konten teks di hero section */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 24px;
+}
+
+/* Bagian Tentang Kami, justify text */
+.about-section {
+    padding: 50px;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: justify; /* Teks rata kanan-kiri */
+}
+
+/* Bagian produk dengan justify text */
+.content-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: justify; /* Teks rata kanan-kiri */
+}
+
+/* Konten produk */
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Memungkinkan elemen tetap rapih di perangkat kecil */
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 60px; /* Menambahkan ruang ekstra di bawah konten */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: justify; /* Teks dalam produk */
+    position: relative;
+}
+
+/* Gambar produk */
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Tombol beli */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Pindahkan tombol ke kanan */
+    bottom: 20px; /* Letakkan di bagian bawah */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Responsiveness untuk kotak produk di perangkat kecil */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Membuat produk memenuhi layar penuh pada perangkat kecil */
+    }
+
+    button {
+        right: 10px; /* Sesuaikan jarak tombol untuk perangkat kecil */
+        bottom: 10px;
+    }
+}
+
+/* Bagian Info Kontak */
+.contact-section {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
